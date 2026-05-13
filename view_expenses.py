@@ -122,32 +122,3 @@ def display_menu(expenses: List[Dict]) -> None:
                 break
             else:
                 print("Invalid option. Please try again.")
-
-
-if __name__ == "__main__":  
-    expenses_debug = [
-        {"name": "Bar", "amount": 70.0, "category": "Entertainment", "date": "2026-01"},
-        {"name": "Rent", "amount": 600.0, "category": "Utilities", "date": "2026-01"},
-        {"name": "Lunch", "amount": 35.5, "category": "Food", "date": "2026-02"},
-        {"name": "Gas", "amount": 145.0, "category": "Transport", "date": "2026-02"},
-        {"name": "Lunch", "amount": 35.5, "category": "Food", "date": "2026-03"},
-        {"name": "Bus Ticket", "amount": 2.75, "category": "Transport", "date": "2026-03"},
-        {"name": "Movie", "amount": 12.0, "category": "Entertainment", "date": "2026-04"},
-        {"name": "Electricity Bill", "amount": 60.0, "category": "Utilities", "date": "2026-04"}
-    ]
-    
-
-    print("Testing view_expenses function with sample data...")
-    while True:
-        debug_choice = input(f"Press 1 do an empty test, 2 to use debug data or 3 to exit: ")
-        if debug_choice == "1":
-            print("\nTesting with empty expenses list...\n")
-            display_menu([])
-        elif debug_choice == "2":
-            print("Testing with sample expenses data...")
-            display_menu(expenses_debug)
-        elif debug_choice == "3":
-            print("Exiting program.")
-            break
-        else:
-            print("Invalid option. Please try again.")

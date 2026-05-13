@@ -35,19 +35,3 @@ def save_expenses(filename: str, expenses: List[Dict]) -> None:
     """
     with open(filename, "w") as f:
         json.dump(expenses, f, indent=4)
-    
-
-
-if __name__ == "__main__":
-    expenses = [
-        {
-            "name": "Lunch",
-            "amount": 35.5,
-            "category": "Food",
-            "date": "2023-04"
-        }
-    ]
-    filename = "expenses.json"
-    save_expenses(filename, expenses)
-    expenses = load_expenses(filename)
-    print(expenses)

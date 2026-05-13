@@ -31,6 +31,9 @@ def add_expense(expenses: List[Dict], categories: List[str]) -> None:
     while True:
         try:
             amount = float(input("Enter expense amount (ex: 10.50): $"))
+            if amount <= 0:
+                print("Amount cannot be zero or negative. Please enter a valid number.")
+                continue
             break
         except ValueError:
             print("Invalid amount. Please enter a valid number.")
@@ -42,9 +45,11 @@ def add_expense(expenses: List[Dict], categories: List[str]) -> None:
             print(f"{i}. {cat}")
         
         choice = input(f"Choose a category (1-{len(categories)}): ").strip()
-        if choice.isdigit() and 1 <= int(choice) <= len(categories):
-            category = categories[int(choice) - 1]
-            break
+        if choice.isdigit():
+            choice_idx = int(choice)
+            if 1 <= choice_idx <= len(categories):
+                category = categories[choice_idx - 1]
+                break
         print("Invalid choice. Please select a valid number.")
     
     while True:
@@ -82,24 +87,3 @@ def print_expenses(expenses: List[Dict]) -> None:
         print(f"Category: {expense['category']}")
         print(f"Date: {expense['date']}")
         print("-" * 20)
-
-
-if __name__ == "__main__":
-    # this is for testing purposes, to check if the add_expense function is working correctly
-    expenses = []
-    categories = categories_list()
-    while True:
-        print("Financial Tracker Menu:")
-        print("1. Add Expense")
-        print("2. View Expenses")
-        print("3. Exit Program ")
-        choice = input("Choose an option: ")
-        if choice == "1":
-            add_expense(expenses, categories)
-        elif choice == "2":
-            print_expenses(expenses)
-        elif choice == "3":
-            print("Exiting program.")
-            break
-        else:
-            print("Invalid option. Please try again.")

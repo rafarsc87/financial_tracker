@@ -175,17 +175,6 @@ def main() -> None:
     Main entry point of the application. Handles data loading and main loop.
     """
     expenses = load_expenses("expenses.json")
-    if not expenses:
-        expenses = [
-            {"name": "Bar", "amount": 70.0, "category": "Entertainment", "date": "2026-01"},
-            {"name": "Rent", "amount": 600.0, "category": "Utilities", "date": "2026-01"},
-            {"name": "Lunch", "amount": 35.5, "category": "Food", "date": "2026-02"},
-            {"name": "Gas", "amount": 145.0, "category": "Transport", "date": "2026-02"},
-            {"name": "Lunch", "amount": 35.5, "category": "Food", "date": "2026-03"},
-            {"name": "Bus Ticket", "amount": 2.75, "category": "Transport", "date": "2026-03"},
-            {"name": "Movie", "amount": 12.0, "category": "Entertainment", "date": "2026-04"},
-            {"name": "Electricity Bill", "amount": 60.0, "category": "Utilities", "date": "2026-04"}
-    ] # this is for testing purposes, to have some data to work with when testing the program. It can be removed later when the program is fully functional.
     
     categories = categories_list()
 
@@ -203,7 +192,6 @@ def main() -> None:
 
         elif choice == "2":
             print("Viewing expenses...")
-            #print(expenses) # this is for testing purposes, to check if the expenses are being added correctly
             view_expenses_menu(expenses)
 
         elif choice == "3":
