@@ -1,5 +1,8 @@
 # Financial Tracker CLI Application
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 A Command Line Interface (CLI) application designed to help users track their monthly expenses, categorize spending, and analyze financial habits through summaries. This application provides a simple yet effective way to manage personal finances directly from the terminal.
 
 ## ✨ Features
@@ -70,8 +73,12 @@ The application is modularized into several Python files, each responsible for a
 ## 📄 License   
 This project is licensed under the MIT License - see the `LICENSE` file for details.
 
+## 👨‍💻 Connect with me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-salgado-940ab9406)
+
 ## 👨‍💻 Developed By
 
 Rafael Salgado
 *Building Python Backend Applications*
-www.linkedin.com/in/rafael-salgado-940ab9406
+
