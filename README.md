@@ -33,7 +33,7 @@ A Command Line Interface (CLI) application designed to help users track their mo
 
 2.  **Clone the repository:**
     ```bash
-    git clone https://github.com/rafarsc87/financial-tracker.git
+    git clone https://github.com/rafarsc87/financial_tracker.git
     cd financial-tracker
     ```
     *(If you downloaded the files directly, navigate to the project directory.)*
@@ -76,6 +76,8 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 ## 👨‍💻 Connect with me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-salgado-940ab9406)
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafarsc87)
 
 ## 👨‍💻 Developed By
 
