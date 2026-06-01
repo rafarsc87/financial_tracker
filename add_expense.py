@@ -6,16 +6,8 @@ It manages user input for expense details and ensures data is persisted.
 
 from datetime import datetime
 from typing import List, Dict
+from constants import EXPENSES_FILE
 from storage import save_expenses
-
-def categories_list() -> List[str]:
-    """
-    Returns a list of predefined expense categories.
-    
-    Returns:
-        List[str]: A list containing the valid category names.
-    """
-    return ["Food", "Transport", "Entertainment", "Utilities"]
 
 
 def add_expense(expenses: List[Dict], categories: List[str]) -> None:
@@ -69,21 +61,6 @@ def add_expense(expenses: List[Dict], categories: List[str]) -> None:
     
     expenses.append(expense)
     expenses.sort(key=lambda x: x["date"], reverse=False) 
-    save_expenses("expenses.json", expenses)
+    save_expenses(EXPENSES_FILE, expenses)
 
     print("\n>>> Expense added successfully! <<<\n")
-    
-
-def print_expenses(expenses: List[Dict]) -> None: 
-    """
-    A debug utility to print raw expense details to the console.
-    
-    Args:
-        expenses (List[Dict]): The list of expenses to print.
-    """
-    for expense in expenses:
-        print(f"Name: {expense['name']}")
-        print(f"Amount: ${expense['amount']:.2f}")
-        print(f"Category: {expense['category']}")
-        print(f"Date: {expense['date']}")
-        print("-" * 20)

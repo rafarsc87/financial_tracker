@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-A Command Line Interface (CLI) application designed to help users track their monthly expenses, categorize spending, and analyze financial habits through summaries. This application provides a simple yet effective way to manage personal finances directly from the terminal.
+A Command Line Interface (CLI) application designed to help users track their expenses, categorize spending, and analyze financial habits through summaries. This application provides a simple yet effective way to manage personal finances directly from the terminal.
 
 ## ✨ Features
 
@@ -18,6 +18,9 @@ A Command Line Interface (CLI) application designed to help users track their mo
 -   **Filter by Month:** Users can filter the expense list to view records from a specific month.
 -   **Filter by Category:** Users can filter the expense list to view records belonging to a specific category.
 
+### Expense Management
+- **Delete Expense:** Users can remove existing expense records by selecting them from a numbered list, with a confirmation prompt before permanent removal.
+
 ### Financial Summaries
 -   **Grand Total:** Calculates and displays the grand total of all recorded expenses.
 -   **Category Breakdown:** Provides a detailed breakdown of total spending per category.
@@ -25,7 +28,7 @@ A Command Line Interface (CLI) application designed to help users track their mo
 
 ### Data Persistence
 -   **JSON Storage:** All expense data is stored persistently in a `expenses.json` file.
--   **Automatic Loading:** The system automatically loads existing data from `expenses.json` upon execution, ensuring data is retained between sessions.
+-   **Automatic Loading:** The system automatically loads existing data from an `expenses.json` file upon execution, ensuring data is retained between sessions.
 
 ## 🚀 Installation
 
@@ -60,10 +63,16 @@ The application is modularized into several Python files, each responsible for a
 -   `main.py`: The primary entry point, managing the main menu and overall application flow.
 -   `add_expense.py`: Handles user input for adding new expenses and performs data validation.
 -   `view_expenses.py`: Provides functions to display and filter expense records based on various criteria.
+-   `menu.py`: Manages the sub-menu navigation logic and UI flow for different features.
+-   `handlers.py`: Coordinates interaction between the user interface and the business logic.
 -   `display_expenses.py`: Contains UI utility functions for rendering stylized headers, tabular data, and summary boxes.
 -   `calculate_summary.py`: Implements the logic for aggregating financial data, calculating grand totals, and category-wise spending.
+-   `delete_expense.py`: Handles the logic for removing records and updating persistent storage.
+-   `constants.py`: Centralizes application constants such as category names and file paths.
 -   `storage.py`: Manages data persistence, responsible for loading and saving expense records to `expenses.json`.
 -   `expenses.json`: (Automatically created/updated) The JSON file where all your expense data is stored.
+-   `requirements.txt`: Lists the environment requirements (Standard Library).
+-   `REQUIREMENTS.md`: Full Software Requirements Specification document.
 
 ## 🛠️ Requirements
 
@@ -83,4 +92,3 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 Rafael Salgado
 *Building Python Backend Applications*
-

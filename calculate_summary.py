@@ -4,10 +4,7 @@ This module provides logic for aggregating financial data.
 It calculates grand totals and categorizes spending for reporting.
 """
 
-import datetime
 from typing import List, Dict, Tuple
-
-categories_list: List[str] = ["Food", "Transport", "Entertainment", "Utilities"]
 
 
 def calculate_summary(expenses: List[Dict], categories_list: List[str]) -> Tuple[float, Dict[str, float]]:
